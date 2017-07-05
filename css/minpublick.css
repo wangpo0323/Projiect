@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+/*公共样式*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,td,li{margin:0;padding:0;}
+body{font-size:13px; font-family:"微软雅黑";word-wrap:break-word;height:100%;background:#fff;color:#999999;}
+ul,li{list-style:none;}
+img{vertical-align:middle;display:inline;border:none;}
+input,select{outline:none;border:0;}
+fieldset ,a ,img{border:0;}
+.w{width:1190px;margin:0 auto;}
+.l{float:left;}
+.r{float:right;}
+a,a:visited{color:#9e9e9e;text-decoration: none;}
+a:active{color:#999999;}
+a:hover{color:#f40;}

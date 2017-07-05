@@ -1,0 +1,293 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-29 14:45:52
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-07-04 21:42:53
+*/
+/*logo区域样式*/
+.logo{
+	width:100%;
+	height:92px;
+}
+.classW{
+	width:980px;
+	height:92px;
+	margin:0 auto;
+}
+#logo{
+	margin-top:7px;
+}
+/*输入部分样式*/
+.zc_content{
+	width:100%;
+	height:552px;
+}
+.zc_content_w{
+	width:980px;
+	height:552px;
+	margin:0 auto;
+}
+.content{
+	width:750px;
+	margin:0 auto;
+	height:550px;
+	border:1px solid #ccc;
+}
+/*输入框区域样式*/
+.zc_content_top{
+	width:750px;
+	height:425px;
+}
+.zc_content_top_left{
+	width:440px;
+	height:425px;
+	padding-top:30px;
+	padding-left:30px;
+}
+/*邮箱的样式*/
+.Eamil{
+	width:340px;
+	height:30px;
+	display:block;
+	line-height:30px;
+	padding-left:30px;
+	margin-bottom: 30px;
+}
+.email{
+	width:222px;
+	height:24px;
+	border:1px solid #ccc;
+}
+.email_format{
+	width:240px;
+	height:22px;
+	padding-left:100px;
+	display:block;
+}
+#span1{
+	color:red;
+}
+#span2{
+	color:red;
+}
+/*密码的样式*/
+.Password{
+	width:340px;
+	height:30px;
+	display:block;
+	line-height:30px;
+	padding-left:30px;
+}
+.password{
+	width:222px;
+	height:24px;
+	border:1px solid #ccc;
+}
+.password_format{
+	width:240px;
+	height:22px;
+	padding-left:100px;
+	display:block;
+}
+/*登录框样式*/
+.btn{
+	width:260px;
+	height: 32px;
+	margin-top:30px;
+	display: block;
+	padding-left:100px;
+}
+.butt{
+	width:103px;
+	height:32px;
+	color:#fff;
+	background-color:#de0606;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+.btn a{
+	color:#000;
+}
+
+/*注册右边的样式*/
+.zc_content_top_right{
+	width:250px;
+	height:425px;
+	float:left;
+	background:url(../images/dl_logo_r4_c8.gif) no-repeat left center;
+	padding-top:30px;
+	padding-left:30px;
+}
+h3{
+	font-size:16px;
+	height:32px;
+	line-height:32px;
+	color:#000;
+}
+h4{
+	font-size:13px;
+	height:25px;
+	line-height:25px;
+	color:#000;
+}
+.zhuce{
+	display: block;
+	width: 94px;
+	height:29px;
+	border:1px solid #ccc;
+	line-height: 29px;
+	text-align: center;
+	margin:10px 0;
+	cursor: pointer;
+	background:#e6e3e1;
+	border-radius: 10px;
+}
+.xinxi{
+	width:250px;
+	height:70px;
+	margin-top:20px;
+}
+.xinxi>li{
+	width:230px;
+	height:23px;
+	line-height:23px;
+	padding-left:20px;
+	background:url(../images/tu_r2_c4.gif) no-repeat left center;
+}
+.linjie{
+	width:230px;
+	height:84px;
+}
+.linjie>li{
+	width:100px;
+	height:28px;
+	float:left;
+	line-height:28px;
+	text-align:left;
+	margin-bottom:2px;
+}
+.span1{
+	display:block;
+	float:left;
+	width:20px;
+	height:28px;
+	background:red;
+}
+.linjie>li:nth-child(1) span{
+	background:url(../images/dl_logo.gif) no-repeat 0px -75px;
+}
+.linjie>li:nth-child(2) span{
+	background:url(../images/dl_logo.gif) no-repeat 0px -127px;
+}
+.linjie>li:nth-child(3) span{
+	background:url(../images/dl_logo.gif) no-repeat 0px -21px;
+}
+.linjie>li:nth-child(4) span{
+	background:url(../images/dl_logo.gif) no-repeat 0px -102px;
+}
+.linjie>li:nth-child(5){
+	width:120px;
+	height:28px;
+	background:red;
+	background:url(../images/dl_logo.gif) no-repeat -128px -122px;
+}
+/*提示的样式*/
+.zc_content_bototm{
+	width:750px;
+	height:40px;
+	margin-top:40px;
+	background:red;
+}
+.zc_content_bototm ul{
+	width:750px;
+	height:40px;
+	margin-top:85px;
+	background:#ccc;
+}
+.zc_content_bototm ul li{
+	float: left;
+	line-height: 40px;
+}
+.zc_content_bototm ul li:last-child span{
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-top:10px;
+	background:url(../images/dl_logo.gif) no-repeat 0% 65%;
+}
+/*foot的样式*/
+.foot{
+	width:980px;
+	margin:0 auto;
+}
+.footW{
+	margin-top:40px;
+	height:75px;
+	width:100%;
+}
+.footW ul:nth-child(1){
+	width:750px;
+	height:30px;
+	margin:0 auto;
+}
+.footW ul:nth-child(1)>li{
+	float:left;
+	width:150px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	color:#000;
+}
+.footer{
+	width:600px;
+	height:45px;
+	margin:0 auto;
+}
+.footer li{
+	float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

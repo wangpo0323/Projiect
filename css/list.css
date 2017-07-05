@@ -1,0 +1,210 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-30 19:20:49
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-07-03 13:20:15
+*/
+/*中间部分样式*/
+#market{
+	margin-top:10px;
+	width: 100%;
+	height:3417px;
+}
+.w{
+	height:3417px;
+}
+/*左边的样式*/
+.marketLeft{
+	width: 184px;
+	height:2720px;
+	float: left;
+	overflow: hidden;
+}
+.Left1{width:182px;height:410px;margin-bottom: 10px;border:1px solid #B9B9B9;}
+.Left2{width:182px;height:1602px;border:1px solid #B9B9B9;margin-bottom: 14px;}
+.Left3{width:182px;height: 678px;margin-bottom: 10px;border:1px solid #B9B9B9;}
+.moure{width:182px;height:36px;display: block;line-height: 36px;border-bottom: 1px solid #ccc;}
+.moure h2{
+	width:80px;
+	background: url(../image/neirong_r11_c4.jpg) no-repeat left center;
+	padding-left:20px;
+	font-size: 14px;
+	float:left;
+	margin-left:10px;
+}
+.moure .gengduo{float:right;}
+.moure .gengduo a{color:#ccc;}
+.showImg{width: 180px;height:auto;}
+.showImg li{width:170px;height:241px;padding-left:6px;
+			margin-top:7px;float: left;border-bottom:1px dashed #D2D2D2;
+			padding:5px 5px;}
+.showImg li img{width:168px;height: 168px;border:1px solid #ccc;text-align:center;}
+.wenzi{height:38px;line-height:20px;padding:5px 2px;font-size:12px;float:left;
+		text-align: left;overflow: hidden;display: block;width:170px;margin-right: 10px;}
+.jiage{width:170px;padding:5px;display: block;height:23px;}
+.jiage span{padding-right:20px;}
+.jiage span:first-child{font-weight: 700;color:#cc0000;}
+.jiage span:last-child{text-decoration: line-through;}
+.Left3Top{width:162px;
+		height:36px;border-bottom:1px solid #ccc;line-height: 36px;
+		padding-left:20px;}
+.Left3Top h3{text-align: center;background:url(../image/neirong_r18_c6.jpg) no-repeat left center;float: left;padding-left:20px;}
+.list1{width:170px;height:98px;padding:5px;margin-top:10px;border-bottom: 1px dashed #ccc;}
+.list1 img{width:80px;
+			height:80px;border:1px solid #ccc;float: left;}
+.x{display: block;width: 85px;height: 65px;float: left;text-align: center;}
+.jq{width: 74px;height: 22px;line-height: 22px;text-align: center;display: block;float: left;text-decoration: line-through;color:#cc0000;font-weight:700;}
+/*右边的样式*/
+.marketRight{
+	width:984px;
+	height: 3397px;
+	float: left;
+	margin-left: 22px;
+}
+.neirong{
+	width:982px;
+	height:86px;
+	border:1px solid #f1f1f1;
+	float:left;
+	margin-top:5px;
+	padding-bottom:10px;
+	background:url(../image/neirong_r2_c4.jpg);
+}
+.span1{
+	width:70px;
+	float: left;
+	padding:10px 0 0 20px;
+	display: inline-block;
+	height:32px;
+	font-size:16px;
+	color:#000;
+	font-weight: 800;
+}
+.Refine{
+	float: left;
+	padding:10px 0 0 10px;
+	display: inline-block;
+	width:870px;
+	height:32px;
+}
+.pinpai{
+	width:962px;
+	height:54px;
+	padding:10px 0 0 10px;
+}
+.pinpai li{
+	float: left;
+	padding:0px 10px;
+}
+/*排序*/
+.function{
+	width:982px;
+	height:20px;
+	margin-top:10px;
+	border-bottom:2px solid #ed145b;
+	float:left;
+}
+.title{
+	width:68px;
+	height:21px;
+	float:left;
+	background-color:#ED145B;
+	color:#fff;
+	padding-left:4px;
+	margin-right:20px;
+	display: block;
+}
+.changxiao{
+	display: block;
+	padding-left:10px;
+	float:left;
+	margin:0 10px;
+	background:url(../image/shang_r4_c4.jpg) no-repeat left center;
+}
+.upchangxiao{
+	display: block;
+	padding-left:10px;
+	float:left;
+	margin:0 10px;
+	background:url(../image/xia_r5_c6.jpg) no-repeat left center;
+}
+.fanye{
+	position:relative;
+	float:right;
+	width:250px;
+	line-height: 14px;
+	height:14px;
+	text-align: right;
+}
+.red{
+	color:red;
+	font-weight: 600px;
+}
+.shangp_a{
+	width:984px;
+	height:3190px;
+	clear:both;
+}
+.shangp_a ul{
+	width:984px;
+	height:3190px;
+}
+.shangp_a ul li{
+	float:left;
+	width:235px;
+	padding:2px 5px;
+	height:auto;
+}
+.shangp_a ul li .zsImg{
+	width:233px;
+	height:233px;
+	border:1px solid #B9B9B9;
+	margin-top:10px;
+	display:block;
+}
+.shangp_a ul li .zsImg img{
+	width:233px;
+	height:233px;
+}
+.shangpin_zw{
+	height:38px;
+	float:left;
+	line-height: 20px;
+	overflow: hidden;
+	text-align: left;
+	width:235px;
+	padding:5px 0px;
+	display:block;
+}
+.shangpin_jq{
+	float:left;
+	width:235px;
+	height:auto;
+}
+.nowJpo{
+	float:left;
+	color:#cc0000;
+	font-size: 14px;
+	font-weight: 600;
+}
+.oldJp{
+	font-size:12px;
+	text-decoration: line-through;
+	margin-left:5px;
+	float: left;
+}
+#qin{
+	float:left;
+	cursor: pointer;
+	width:70px;
+	height:22px;
+	line-height: 22px;
+	text-align: center;
+	margin-left:5px;
+	background:#ce13ba;
+	color:#fff;
+	border-radius: 10px;
+}
+
+
+

@@ -11,7 +11,7 @@ gulp.task("copy-image",function(){
 });
 gulp.task("copy-html",function(){
 	gulp.src("html/**/*")
-	.pipe(gulp.Eest("E:/PhP/WWW/xiangmu/html"));
+	.pipe(gulp.dest("E:/PhP/WWW/xiangmu/html"));
 });
 gulp.task("copy-css",function(){
 	gulp.src("css/**/*")
@@ -28,6 +28,10 @@ gulp.task("copy-php",function(){
 gulp.task("copy-index",function(){
 	gulp.src("index.html")
 	.pipe(gulp.dest("E:/PhP/WWW/xiangmu"));
+});
+gulp.task("copy-iconfont",function(){
+	gulp.src("iconfont/**/*")
+	.pipe(gulp.dest("E:/PhP/WWW/xiangmu/iconfont"));
 });
 
 gulp.task("watch",function(){

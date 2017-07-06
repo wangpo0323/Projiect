@@ -205,6 +205,39 @@
 	color:#fff;
 	border-radius: 10px;
 }
+/*树状导航*/
+#title{
+	width:100%;
+	height:33px;
+	text-align: center;
+	line-height:33px;
+	background:#826bd7;
+	color:#fff;
+	font-weight: bold;
+}
+.shuNav{
+	width:100%;
+	height:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -23,29 +23,34 @@
 				<div class="zc_content_top">
 					<div class="zc_content_top_left l">
 						<h2>会员注册</h2>
+					<form method="post" action="../php/registered.php" id="form1">
 						<span class="Eamil">
-							您的邮箱：<input  type="email" id="email" name="email"  class="email"/><span id="span1"></span><br/>
+							您的邮箱：<input  required type="email" id="email" name="email"  class="email"/><span id="span1"></span><br/>
 						</span>
 							<span class="email_format">填写真实邮箱</span>
+							<span class="Eamil">
+							您的电话：<input  required type="tel" id="email" name="userPhone"  class="email"/><span id="span1"></span><br/>
+						</span>
+							<span class="email_format">填写真实电话</span>
 						<span class="Password">
-							设置密码：<input type="password" name="password" class="password" id="password"/>
+							设置密码：<input type="password" required name="password" class="password" id="password"/>
 								<span id="sp2"></span>
 						</span>
 							<span class="password_format">密码为6-16位字母或数字</span>
 						<span class="confirmpass">
-							确认密码：<input type="password" name="confirm" class="confirm" id="password1"/><span id="sp3"></span>
+							确认密码：<input type="password" required name="confirm" class="confirm" id="password1"/><span id="sp3"></span>
 						</span>
 							<span class="confirm_format">密码为6-16位字母或数字</span>
 						<span class="yanzheng">
-							验证码：<input type="text" name="Verification"  class="Verification"/>
+							验证码：<input type="text" required name="Verification"  class="Verification"/>
 							<span><span id="showCode" onclick="changeyzm()"></span><a href="#" class="genghuan">看不清楚，换一张</a></span>
 						</span>
 						<span class="confirm_format"></span>
 						<span class="Submit">
-						<form>
-							<input type="submit" value="同意已下协议，提交注册" id="input1"/>
-							<input type="button" value="重置" id="input2"/></form>
+							<a href="javascript:sb();">提交</a>
+							<input type="reset" value="重置" id="input2"/>
 						</span>
+					</form>
 					</div>
 					<div class="zc_content_top_right">
 						<h3>美国购物网会员享受如下服务：</h3>

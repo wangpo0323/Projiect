@@ -1,17 +1,17 @@
-
+/*
 //验证邮箱
 $("email").onblur=function(){
 	if(!checkAll("Email",$("email").value)){
-		$("span1").innerHTML="X"
+		$("span1").innerHTML="* 邮箱格式有误"
 		$("email").style.cssText="border:1px solid red"
 	}else{
-		$("span1").innerHTML="√"
+		$("span1").innerHTML="√ 可以使用"
 	}
 };
 //验证密码
 $("password").onblur=function(){
 	if(!checkAll("password",$("password").value)){
-		$("sp2").innerHTML="x"
+		$("sp2").innerHTML="x 密码输入错误"
 		$("password").style.cssText="border:1px solid red"
 	}else{
 		$("sp2").innerHTML="√"
@@ -20,15 +20,14 @@ $("password").onblur=function(){
 //确认密码
 $("password1").onblur=function(){
 	if(!checkAll("password",$("password").value)){
-		$("sp3").innerHTML="x"
+		$("sp3").innerHTML="x 密码输入错误";
+		$("password1").style.cssText="border:1px solid red"
 	}else if($("password").value!=$("password1").value){
 		$("sp3").innerHTML="两次输入密码不一致"
 		$("password1").style.cssText="border:1px solid red"
 		$("password").style.cssText="border:1px solid red"
 	}else{
 		$("sp3").innerHTML="√"
-		$("password1").style.cssText="border:none;"
-		$("password").style.cssText="border:none;"
 	}
 };
 //验证码
@@ -66,11 +65,44 @@ function addLoadEvent(func){
             func();
         }
     }
+};
+addLoadEvent(changeyzm);*/
+//给刷新按钮绑定事件
+$("input2").onclick=function(){
+	$("input2").reset;
 }
-addLoadEvent(changeyzm);
-
-
-
+//提交按钮绑定事件
+function sb(){
+	if(!checkAll("Email",$("email").value)){
+		$("span1").innerHTML="* 邮箱格式有误"
+		$("email").style.cssText="border:1px solid red";
+		$("email").focus();
+		return;
+	}else{
+		$("span1").innerHTML="√ 可以使用";
+		
+	}
+	if(!checkAll("password",$("password").value)){
+		$("sp2").innerHTML="x 密码输入错误"
+		$("password").style.cssText="border:1px solid red";
+		return;
+	}else{
+		$("sp2").innerHTML="√"
+		
+	}
+	if(!checkAll("password",$("password").value)){
+		$("sp3").innerHTML="x 密码输入错误";
+		$("password1").style.cssText="border:1px solid red";
+	}else if($("password").value!=$("password1").value){
+		$("sp3").innerHTML="两次输入密码不一致"
+		$("password1").style.cssText="border:1px solid red"
+		$("password").style.cssText="border:1px solid red";
+		return;
+	}else{
+		$("sp3").innerHTML="√";
+	}
+	$("form1").submit();
+}
 
 
 

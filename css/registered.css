@@ -37,12 +37,10 @@
 	height:340px;
 	padding-top:30px;
 	padding-left:30px;
-
-
 }
 /*邮箱的样式*/
 .Eamil{
-	width:340px;
+	width:385px;
 	height:30px;
 	display:block;
 	line-height:30px;
@@ -60,7 +58,7 @@
 }
 /*密码的样式*/
 .Password{
-	width:340px;
+	width:385px;
 	height:30px;
 	display:block;
 	line-height:30px;
@@ -78,7 +76,7 @@
 }
 /*确认密码的样式*/
 .confirmpass{
-	width:340px;
+	width:385px;
 	height:30px;
 	display:block;
 	line-height:30px;

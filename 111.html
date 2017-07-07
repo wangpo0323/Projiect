@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 
+ 
+<form name="form" action="跳转的页面" method="post"  onsubmit="return check()">
+  	<input type="text" id="name"/>   
+   <input type="submit" value="提交"/>
+</form>
+</body>
+</html>
+	<script>
+	function check(){
+ 2    var name = document.getElementById("name").value;
+ 3    if(name ==  null || name == ''){
+ 4         alert("用户名不能为空");
+ 5         return false;
+ 			console.log(1)
+ 6    }
+ 7   	return true;
+ 8 }
+	</script>

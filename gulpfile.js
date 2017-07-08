@@ -33,6 +33,11 @@ gulp.task("copy-iconfont",function(){
 	gulp.src("iconfont/**/*")
 	.pipe(gulp.dest("E:/PhP/WWW/xiangmu/iconfont"));
 });
+gulp.task("copy-addGoods",function(){
+	gulp.src("addGoods.html")
+	.pipe(gulp.dest("E:/PhP/WWW/xiangmu"));
+});
+
 
 gulp.task("watch",function(){
 	gulp.watch("css/**/*",["copy-css"]);

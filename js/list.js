@@ -6,6 +6,52 @@
 */
 
 'use strict';
+$.ajax({
+	type:"get",
+	url:"../php/getGoodsList.php",
+	async:true,
+	success:function(data){
+		var obj=eval(data);
+		for(let i=0;i<8;i++){
+			let goodsId=obj[i].goodsId;
+			let goodsPrice=obj[i].goodsPrice;
+			let goodsImg=obj[i].goodsImg;
+			let goodsDesc=obj[i].goodsDesc;
+			let str="<li><a href='#'><img src='../images/S1L-A00-190.jpg'/></a><p><a href='#'></a><a href='#'>看到沮丧拉开发来的</a></p><p><a href='#'>大发发trfytu的大幅</a></p><p><a href='#'>安图恩几点开始对方告诉对方</a></p></li>";
+			$(".shangpin").append(str); 
+		}
+	}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.onload=function(){
 	page({
 			id:"div1",
@@ -13,7 +59,7 @@ window.onload=function(){
 			allNum:5
 			//callBack:function(now,all){})
 	})
-}
+};
 //函数
 function page(opt){
 		if(!opt.id){return false};//没有ID不执行下面的代码

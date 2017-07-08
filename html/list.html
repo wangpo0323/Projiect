@@ -6,7 +6,6 @@
 		<link href="../css/iconfont.css" rel="stylesheet" type="text/css">
 		<link href="../css/publick.css" rel="stylesheet" type="text/css">
 		<link href="../css/list.css" rel="stylesheet" type="text/css">
-			<script src="../js/list.js"></script>
 	</head>
 	<body>
 	<!--header-->
@@ -423,7 +422,7 @@
 					<span class="fanye">当前页<font class="red">&nbsp;1&nbsp;</font>页/共&nbsp;7&nbsp;页<a href="#">上一页</a><a href="#">下一页</a></span>
 				</div>
 				<div class="shangp_a" id="div1">
-					<ul>
+					<ul class="shangpin">
 						<li>
 							<span class="zsImg"><a href="#"><img src="../image/p1.jpg"/></a></span>
 							<span class="shangpin_zw"><a href="#">专业美国代购COACH /蔻驰 Pebbled 女士手提包 美国直邮</a></span>
@@ -569,3 +568,25 @@
 	</div>
 	</body>
 </html>
+
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/list.js"></script>
+<script>
+	$.ajax({
+	type:"get",
+	url:"../php/getGoodsList.php",
+	async:true,
+	success:function(data){
+		alert(data);
+		var obj=eval(data);
+		for(let i=0;i<8;i++){
+			let goodsId=obj[i].goodsId;
+			let goodsPrice=obj[i].goodsPrice;
+			let goodsImg=obj[i].goodsImg;
+			let goodsDesc=obj[i].goodsDesc;
+			let str="<li><a href='#'><img src='../images/S1L-A00-190.jpg'/></a><p><a href='#'></a><a href='#'>看到沮丧拉开发来的</a></p><p><a href='#'>大发发trfytu的大幅</a></p><p><a href='#'>安图恩几点开始对方告诉对方</a></p></li>";
+			$(".shangpin").append(str); 
+		}
+	}
+});
+</script>

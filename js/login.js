@@ -1,4 +1,5 @@
 //获取邮箱的id
+/*
 function $(id){
 	return document.getElementById(id);
 }
@@ -31,46 +32,21 @@ function chechkUser(){
 		return false;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
+var userEmile,userPass;
+$(function(){
+	$("#a").click(function(){
+		//1.ajax(post方式)
+		$.post("../php/login.php",{userEmile:$("#email").val(),userPass:$("#password").val()},function(data){
+			if(data=="0"){
+				alert("登录有误，请确认邮箱和密码是否输入正确");
+				alert(1);
+			}else if(data=="1"){
+				saveCookie(userEmile,$("#email").val(),360);
+				saveCookie(userPass,$("#password").val(),7);
+				location.href="../index.html";				
+			}
+		})		
+	})
+});
 

@@ -43,6 +43,7 @@
 	height:425px;
 	padding-top:30px;
 	padding-left:30px;
+	float: left;
 }
 /*邮箱的样式*/
 .Eamil{

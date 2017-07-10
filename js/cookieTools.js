@@ -7,8 +7,7 @@
 function saveCookie(key,value,dayCount){
 	var d = new Date();
 	d.setDate(d.getDate()+dayCount);
-	document.cookie =key+"="+ encodeURIComponent(value)+";expires="+d.toGMTString();	
-}
+	document.cookie = key+"="+encodeURIComponent(value)+";expires="+d.toGMTString();}
 
 
 //功能：读取cookie（根据键读取对应的值）

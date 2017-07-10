@@ -31,13 +31,37 @@ a:hover{color:#f40;}
 	line-height:31px;
 }
 .welcom{
-	width:285px;
+	width:400px;
 	height:31px;
 	padding-left:18px;
 	background:url(../images/index_03.jpg) no-repeat left center;
 	display:block;
 	float:left;
 }
+/*插入用户名的样式*/
+.userNAME{
+	width:auto;
+	height:31px;
+	line-height: 31px;
+	display:block;
+	max-width: 150px;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .loading{
 	width:160px;
 	height:31px;

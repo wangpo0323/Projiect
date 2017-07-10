@@ -29,7 +29,27 @@ for(var j=0;j<Lieas.length;j++){
          x = this.x;
     }
 }
-
+//添加到购物车事件
+var vipName,goodsId,goodsCount;
+jQuery("#goumai").click(function(){
+	//读取cookie
+	vipName=getCookie("userName");//获取到账号；
+	goodsId=getCookie("number");//获取到商品编号
+	goodsCount=jQuery("#num").val();//获取到够买的数量;
+	if(vipName==""){
+		location.href="login.html";
+		alert("你还未登陆，请登录后再购买")
+	}else{
+		jQuery.ajax({
+			type: "get",
+	   		url: "../php/addShoppingCart.php",
+	   		data:{"vipName":vipName,"goodsId":goodsId,"goodsCount":goodsCount},
+	   		success:function(data){
+	   			location.href="shopingCar.html";
+	   		};
+		});
+	};
+});
 
 
 

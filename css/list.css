@@ -30,7 +30,15 @@
 	padding-left:20px;
 	font-size: 14px;
 	float:left;
-	margin-left:10px;
+	margin-left:10px;shangpin_zw
+}
+#tishi{
+	display:block;
+	width:350px;
+	height:30px;
+	margin-top:10px;
+	line-height:30px;
+	color:#f40;
 }
 .moure .gengduo{float:right;}
 .moure .gengduo a{color:#ccc;}
@@ -195,10 +203,15 @@
 	background: #ce13ba;
 	border:1px solid #ccc;
 	display:block;
+	border-radius:10px;
+	color:#fff;
+	line-height:22px;
+	margin-left:10px;
+	cursor: pointer;
 }
 /*树状导航*/
 #title{
-	width:100%;
+	width:100%;shangpin_zw
 	height:33px;
 	text-align: center;
 	line-height:33px;

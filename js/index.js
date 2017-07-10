@@ -8,18 +8,12 @@
 	var Lis=document.getElementById("wrap").children;//获取单个li
 	var obannerimg = document.getElementById("wrap").children;//获取li
 	var cbannerimg = obannerimg[0].cloneNode(true)//克隆
-
-
 	var ImgWidth=document.documentElement.clientWidth;
 	var imgs=$('wrap').getElementsByTagName("img");
 		imgs[0].style.left=-(Li-ImgWidth)/2+"px"
 	for(var i=0;i<imgs.length;i++){
 		imgs[i].style.left=-(Li-ImgWidth)/2+"px";
 	}
-
-
-
-	
 	$("wrap").appendChild(cbannerimg);
 	$("wrap").style.width = Li*obannerimg.length+"px"
 	 var num = 0;
@@ -39,8 +33,7 @@
 		 btn[0].className="black";
 	  }else{
 		 btn[num].className="black";
-	  }
-	  
+	  }	  
    }
 	 /* 左按钮*/
    $("left").onclick = function(){
@@ -58,9 +51,8 @@
 		}
 	   btn[num].className="black";
    }
-   
+  
   /* 底部小圆圈鼠标移入*/
- 
  for (var i in btn) {
 	btn[i].className="ccc";
 	btn[0].className="black";
@@ -92,14 +84,6 @@ time = setInterval($("right").onclick,3000)
 	 time = setInterval($("right").onclick,3000);
 	 
   };
-
-
-
-
-
-
-
-
 //第二个轮播图
 var liwidth=$("market_e_ul").getElementsByTagName("li")[0].offsetWidth;
 var btnS = document.getElementById("btn2").children;//获取底部圆圈
@@ -157,9 +141,22 @@ timeR = setInterval($("right2").onclick,3000)
 	 timeR = setInterval($("right2").onclick,3000);
 	 
   }
-
-
-
+//读取cookie
+let userName;
+	userName=getCookie('userName');
+//将userName插入头部
+	if(userName){
+		jQuery(".userNAME").html(userName);
+		jQuery(".loading li:first-child").remove();
+		//将退出按钮插入头部 
+		jQuery(".loading").prepend("<li class='li'><a href='javascript:tuichu()'>退出</a></li>")
+	}
+function tuichu(){
+	jQuery(".loading li:first-child").remove();
+	jQuery(".loading").prepend("<li class='li'><a href='login.html'>请登录</a></li>")
+	removeCookie("userName");
+	location.reload()
+}
 
 
 

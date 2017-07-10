@@ -524,28 +524,22 @@
 					let str="<li num='"+goodsId+"'><a href=''><img src='"+goodsImg+"' class='zsImg'/></a><span class='shangpin_zw'><a href=''>"+goodsDesc+"</a></span><span class='nowJpo'>￥"+goodsType+"</span><span class='oldJp'>￥"+beiyong1+"</span><input type='button' value='立即抢购' id='pin'/></li>"
 					$(".shangpin").append(str);
 				};
-				
 				//设置cookie,将goodsId存入cookie
 				var number;
 				var oUl=document.getElementById("ul");
 				var lis=oUl.getElementsByTagName("li");
-				for(var i=0;i<lis.length;i++){
+				var inputs=oUl.getElementsByTagName("input");
+				for(var i=0;i<inputs.length;i++){
 					(function(i){
-						lis[i].onclick=function(){
+						inputs[i].onclick=function(){
 							//将列表li的序号存入cookie;
-							saveCookie(number,i,7);
+							let num1=lis[i].getAttribute("num");
+							saveCookie("number",num1,7);
 							location.href="detial.html";
-								alert(i)
 						}
-					})(i)
-				
-				}
+					})(i);
+				};
 			}
 		})
-	});
-				
+	});				
 </script>
-
-
-
-

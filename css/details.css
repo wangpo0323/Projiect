@@ -55,6 +55,10 @@
     margin-top:20px;
     cursor: move;
 }
+#mainBox img{
+	width:330px;
+	height:330px;
+}
 #mark{
     width: 100%;
     height: 100%;
@@ -112,25 +116,24 @@
     width: 74px;
     height: 74px;
 }
-
 /*中间区域的样式*/
 .product_center{
 	width:540px;
 	height:312px;
 	float:left;
-	margin-top:29px;
+	margin-top:11px;
 }			
 .product_center_top>li:first-child{
 	font-size: 16px;
 	color:#333;
-	padding:15px 15px 0 0;
+	padding:5px 15px 0 0;
+	font-weight: 800;
 }		
 .product_center>ul>li:nth-child(2){
 	width:360px;
 	height:30px;
 	line-height: 30px;
-
-}		
+}
 .jiage1{
 	width:300px;
 	height:30px;
@@ -147,12 +150,18 @@
 .oldJiage{
 	color:#ccc;
 	text-decoration: line-through;
+	padding-left:5px;
 }			
 .tiaoxuan{
 	width:350px;
 	height:169px;
 
 	margin-top:20px;
+}
+.lastLi{
+	margin-top:10px;
+	width:100%;
+	height:20px;
 }
 .chicui{
     width:350px;

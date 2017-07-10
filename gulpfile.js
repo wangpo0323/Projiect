@@ -33,12 +33,14 @@ gulp.task("copy-iconfont",function(){
 	gulp.src("iconfont/**/*")
 	.pipe(gulp.dest("E:/PhP/WWW/xiangmu/iconfont"));
 });
+gulp.task("copy-listImg",function(){
+	gulp.src("listImg/**/*")
+	.pipe(gulp.dest("E:/PhP/WWW/xiangmu/listImg"));
+});
 gulp.task("copy-addGoods",function(){
 	gulp.src("addGoods.html")
 	.pipe(gulp.dest("E:/PhP/WWW/xiangmu"));
 });
-
-
 gulp.task("watch",function(){
 	gulp.watch("css/**/*",["copy-css"]);
 	gulp.watch("js/**/*",["copy-js"]);
@@ -47,5 +49,6 @@ gulp.task("watch",function(){
 	gulp.watch("php/**/*",["copy-php"]);
 	gulp.watch("html/**/*",["copy-html"]);
 	gulp.watch("index",["copy-index"]);	
+	gulp.watch("listImg",["copy-listImg"]);
 });
 

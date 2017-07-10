@@ -19,7 +19,7 @@
 		mysql_close($con);
 		//3、响应
 		if($count==1){
-			header("refresh:5;url=../login.html");
+			header("refresh:5;url=../html/login.html");
 			print('正在返回登录页面，请稍等');
 		}else{
 			header("refresh:0;url=http://localhost/xiangmu/html/registered.html");

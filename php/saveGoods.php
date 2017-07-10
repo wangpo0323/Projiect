@@ -21,7 +21,6 @@
 	$beiyong11 = $_REQUEST['beiyong11'];
 	$beiyong12 = $_REQUEST['beiyong12'];
 	$beiyong13 = $_REQUEST['beiyong13'];
-	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
 	$conn = mysql_connect("localhost","root","qianfeng");

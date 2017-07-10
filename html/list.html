@@ -330,7 +330,7 @@
 						<li>
 							<span>
 								<a href="#" title="正品代购 MICHAEL KORS迈克科尔斯MK玳瑁中号女包手提耳朵包 美国直邮">
-									<img src="../image/03.jpg" />
+									<img src="../image/04.jpg" />
 									<span class="wenzi">正品代购 MICHAEL KORS迈克科尔斯MK玳瑁中号女包手提耳朵包 美国直邮</span>
 								</a>
 							</span>
@@ -341,51 +341,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="Left3">
-					<div class="Left3Top">
-						<h3>您最近浏览的商品</h3>
-					</div>	
-					<div class="list1">
-						<ul>
-							<li><img src="../image/11.jpg" height="66" width="66">
-								<span class="x">美国正品代购Zoe Chicco手链</span>
-								<span class="jq">￥1828.00</span>
-							</li>
-						</ul>
-					</div>
-					<div class="list1">
-						<ul>
-							<li><img src="../image/11.jpg" height="66" width="66">
-								<span class="x">美国正品代购Zoe Chicco手链</span>
-								<span class="jq">￥1828.00</span>
-							</li>
-						</ul>
-					</div>
-					<div class="list1">
-						<ul>
-							<li><img src="../image/11.jpg" height="66" width="66">
-								<span class="x">美国正品代购Zoe Chicco手链</span>
-								<span class="jq">￥1828.00</span>
-							</li>
-						</ul>
-					</div>
-					<div class="list1">
-						<ul>
-							<li><img src="../image/11.jpg" height="66" width="66">
-								<span class="x">美国正品代购Zoe Chicco手链</span>
-								<span class="jq">￥1828.00</span>
-							</li>
-						</ul>
-					</div>
-					<div class="list1">
-						<ul>
-							<li><img src="../image/11.jpg" height="66" width="66">
-								<span class="x">美国正品代购Zoe Chicco手链</span>
-								<span class="jq">￥1828.00</span>
-							</li>
-						</ul>
-					</div>
-				</div>
+				
 			</div>
 			<!--右边产品展示-->
 			<div class="marketRight">
@@ -422,27 +378,8 @@
 					<span class="fanye">当前页<font class="red">&nbsp;1&nbsp;</font>页/共&nbsp;7&nbsp;页<a href="#">上一页</a><a href="#">下一页</a></span>
 				</div>
 				<div class="shangp_a" id="div1">
-					<ul class="shangpin">
-						<li>
-							<span class="zsImg"><a href="#"><img src="../image/p1.jpg"/></a></span>
-							<span class="shangpin_zw"><a href="#">专业美国代购COACH /蔻驰 Pebbled 女士手提包 美国直邮</a></span>
-							<span class="shangpin_jq">
-								<p class="nowJpo">￥1835.00</p>
-								<font class="oldJp">￥2999.00</font>
-								
-								<input type="button" value="立即抢购" id="qin"/>
-							</span>
-						</li>
-						<li>
-							<span class="zsImg"><a href="#"><img src="../image/p1.jpg"/></a></span>
-							<span class="shangpin_zw"><a href="#">专业美国代购COACH /蔻驰 Pebbled 女士手提包 美国直邮</a></span>
-							<span class="shangpin_jq">
-								<p class="nowJpo">￥1835.00</p>
-								<font class="oldJp">￥2999.00</font>
-								
-								<input type="button" value="立即抢购" id="qin"/>
-							</span>
-						</li>
+					<ul class="shangpin" id="ul">
+						
 					</ul>
 				</div>
 			</div>
@@ -568,25 +505,47 @@
 	</div>
 	</body>
 </html>
-
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../js/list.js"></script>
+<script type="text/javascript" src="../js/cookieTools.js"></script>
 <script>
-	$.ajax({
-	type:"get",
-	url:"../php/getGoodsList.php",
-	async:true,
-	success:function(data){
-		alert(data);
-		var obj=eval(data);
-		for(let i=0;i<8;i++){
-			let goodsId=obj[i].goodsId;
-			let goodsPrice=obj[i].goodsPrice;
-			let goodsImg=obj[i].goodsImg;
-			let goodsDesc=obj[i].goodsDesc;
-			let str="<li><a href='#'><img src='../images/S1L-A00-190.jpg'/></a><p><a href='#'></a><a href='#'>看到沮丧拉开发来的</a></p><p><a href='#'>大发发trfytu的大幅</a></p><p><a href='#'>安图恩几点开始对方告诉对方</a></p></li>";
-			$(".shangpin").append(str); 
-		}
-	}
-});
+	$(function(){
+		$.ajax({
+			type:"get",
+			url:"../php/getGoodsList.php",
+			async:true,
+			success:function(data){
+				let obj=eval(data);
+				for(let i=0;i<24;i++){
+					let goodsId=obj[i].goodsId;
+					let goodsType=obj[i].goodsType;
+					let goodsImg=obj[i].goodsImg;
+					let goodsDesc=obj[i].goodsDesc;
+					let beiyong1=obj[i].beiyong1;
+					let str="<li num='"+goodsId+"'><a href=''><img src='"+goodsImg+"' class='zsImg'/></a><span class='shangpin_zw'><a href=''>"+goodsDesc+"</a></span><span class='nowJpo'>￥"+goodsType+"</span><span class='oldJp'>￥"+beiyong1+"</span><input type='button' value='立即抢购' id='pin'/></li>"
+					$(".shangpin").append(str);
+				};
+				
+				//设置cookie,将goodsId存入cookie
+				var number;
+				var oUl=document.getElementById("ul");
+				var lis=oUl.getElementsByTagName("li");
+				for(var i=0;i<lis.length;i++){
+					(function(i){
+						lis[i].onclick=function(){
+							//将列表li的序号存入cookie;
+							saveCookie(number,i,7);
+							location.href="detial.html";
+								alert(i)
+						}
+					})(i)
+				
+				}
+			}
+		})
+	});
+				
 </script>
+
+
+
+

@@ -8,15 +8,15 @@
 #market{
 	margin-top:10px;
 	width: 100%;
-	height:3417px;
+	height:auto;
 }
 .w{
-	height:3417px;
+	height:auto;
 }
 /*左边的样式*/
 .marketLeft{
 	width: 184px;
-	height:2720px;
+	height:auto;
 	float: left;
 	overflow: hidden;
 }
@@ -57,7 +57,7 @@
 /*右边的样式*/
 .marketRight{
 	width:984px;
-	height: 3397px;
+	height: auto;
 	float: left;
 	margin-left: 22px;
 }
@@ -142,12 +142,12 @@
 }
 .shangp_a{
 	width:984px;
-	height:3190px;
+	height:auto;
 	clear:both;
 }
 .shangp_a ul{
 	width:984px;
-	height:3190px;
+	height:auto;
 }
 .shangp_a ul li{
 	float:left;
@@ -176,11 +176,6 @@
 	padding:5px 0px;
 	display:block;
 }
-.shangpin_jq{
-	float:left;
-	width:235px;
-	height:auto;
-}
 .nowJpo{
 	float:left;
 	color:#cc0000;
@@ -193,17 +188,13 @@
 	margin-left:5px;
 	float: left;
 }
-#qin{
-	float:left;
-	cursor: pointer;
+#pin{
+	float: left;
 	width:70px;
-	height:22px;
-	line-height: 22px;
-	text-align: center;
-	margin-left:5px;
-	background:#ce13ba;
-	color:#fff;
-	border-radius: 10px;
+	height: 22px;
+	background: #ce13ba;
+	border:1px solid #ccc;
+	display:block;
 }
 /*树状导航*/
 #title{

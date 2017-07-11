@@ -116,7 +116,10 @@
 	border-radius:5px;
 	margin-right:20px;
 }
-.tuangou a{
+.tuangou a {
+	color:#fff !important;
+}
+.tuangou a:hover{
 	color:#fff;
 }
 .market_b_right{
@@ -439,8 +442,8 @@
 	text-align: center;
 	line-height: 27px;
 }
-.market_f_bottom_jiage3>a{
-	color:#f1f1f1;
+.market_f_bottom_jiage3 a{
+	color:#fff !important;
 }
 /*中间图片样式*/
 .market_g{
@@ -564,7 +567,7 @@
 	line-height: 27px;
 }
 .market_h_bottom_jiage3>a{
-	color:#f1f1f1;
+	color:#fff !important;
 }
 /*market_i样式*/
 .market_i{
@@ -682,7 +685,7 @@
 	line-height: 27px;
 }
 .market_i_bottom_jiage3>a{
-	color:#f1f1f1;
+	color:#fff !important;
 }
 /*中间图片样式*/
 .market_g{
@@ -806,7 +809,7 @@
 	line-height: 27px;
 }
 .market_j_bottom_jiage3>a{
-	color:#f1f1f1;
+	color:#fff !important;
 }
 /*market_k样式*/
 .market_k{

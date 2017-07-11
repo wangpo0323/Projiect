@@ -24,16 +24,14 @@
 	}else{
 		//如果不存在，则使用insert语句	
 		$sqlstr = "insert into shoppingCart values('".$vipName."','".$goodsId."','".$goodsCount."')";		
-	}
-	
+	}	
 	$result=mysql_query($sqlstr,$conn);	
 	//4）、关闭连接（拆桥）
 	mysql_close($conn);
 	
 	if(!$result){
 		die("添加失败".mysql_error());
-	}	
-	
+	}		
 	//3、给客户端返回（响应） 1：表示添加成功 0：表示添加失败
 	if($result>0){
 		echo 1;	

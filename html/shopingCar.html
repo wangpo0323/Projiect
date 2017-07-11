@@ -39,30 +39,29 @@
 					</div>
 			</div>
 			<div id="headerCenter" class="headerCenter">
-					<h1><a href="../index.html" target="_black"><img src="../images/logo.jpg"/></a></h1>
-					<div class="headerSeach">
-						<from class="headerIpute">
-							<input type="text" placeholder="请输入品牌或商品名称" class="text"/>
-							<input type="button" value="搜索" class="submit"/>
-						</from>
-						<ul class="hotShopping">
-							<li>热门搜索:</li>
-							<li><a href="#" style="color:#a90f11">百傲钙</a></li>
-							<li><a href="#" style="color:#a90f11">Coach新款</a></li>
-							<li><a href="#">CK</a></li>
-							<li><a href="#">GNC</a></li>
-							<li><a href="#">拉夫劳伦</a></li>
-							<li><a href="#">Michael&nbsp;kors</a></li>
-						</ul>
-					</div>
-					<div id="shoppingCar1" class="shoppingCar">
-						<i class="iconfont" >&#xe609;</i>
-						<a href="#">
-							我的购物车
-						</a>
-						<div id="tishi">您还没有购买商品，快去挑选吧！</div>
-					</div>
-					
+				<h1><a href="index.html" target="_black"><img src="../images/logo.jpg"/></a></h1>
+				<div class="headerSeach">
+					<from class="headerIpute">
+						<input type="text" placeholder="请输入品牌或商品名称" class="text"/>
+						<input type="button" value="搜索" class="submit"/>
+					</from>
+					<ul class="hotShopping">
+						<li>热门搜索:</li>
+						<li><a href="#" style="color:#a90f11">百傲钙</a></li>
+						<li><a href="#" style="color:#a90f11">Coach新款</a></li>
+						<li><a href="#">CK</a></li>
+						<li><a href="#">GNC</a></li>
+						<li><a href="#">拉夫劳伦</a></li>
+						<li><a href="#">Michael&nbsp;kors</a></li>
+					</ul>
+				</div>
+				<div id="shoppingCar1" class="shoppingCar">
+					<i class="iconfont" >&#xe609;</i>
+					<a href="#">
+						我的购物车
+					</a>
+					<div id="tishi">您还没有购买商品，快去挑选吧！</div>
+				</div>
 			</div>
 			<!---导航-->
 			<div class="headerBottom">
@@ -232,12 +231,12 @@
                         </div>
 					</li>
 						<!--结束-->
-					<li><a href="../index.html">首页</a></li>
+					<li><a href="index.html">首页</a></li>
 					<li><a href="#">服装鞋类</a></li>
-					<li><a href="#">箱包配饰</a></li>
+					<li><a href="list.html">箱包配饰</a></li>
 					<li><a href="#">营养保健</a></li>
 					<li><a href="#">3天到货</a></li>
-					<li style="line-height:30px;"><a href="#"><img src="../images/index3_r4_c7.jpg"/></a></li>						
+					<li style="line-height:30px;"><a href="Activities.html"><img src="../images/index3_r4_c7.jpg"/></a></li>						
 				</ul>
 				<ul class="r tupian">
 					<li class="l"><img src="../images/index_r3_c58.jpg"/></li>
@@ -271,39 +270,40 @@
 						<td>优惠</td>
 						<td></td>
 					</tr>
+					<!--商品信息显示行---->
 					<tr>
-						<td><input type="checkbox"/></td>
-						<td><img src="../image/2c5f49dd-bbb2-4026-b965-820fe44d7756-s.jpg"/></td>
+						<td><input type="checkbox" id="xuanze" /></td>
+						<td><img src=" " id="img" style="width:65px;height:65px;margin:0 auto;"/></td>
 						<td>
-							<span><a href="#">正品美国代购 Michael Kors迈克科尔斯 女士真皮时尚单肩包 </a></span><br/>
+							<span><a href="#" id="shuoming"> </a></span><br/>
 							<span>尺寸:24*13.5*5cm;</span>
 						</td>
-						<td>￥1599.00</td>
+						<td id="price"></td>
 						<td class="jiusan">
 							<span class="jian" id="btn1">-</span>
-							<input type="text" value="1" id="num"/>
+							<input type="text" value=" 1" id="num"/>
 							<span class="jia" id="btn2">+</span>
 						</td>
 						<td>￥0.00</td>
 						<td>
-							<span>￥1599.00</span><br/>
-							<span>$228.43</span>
+							<span id="sumPrice"></span><br/>
+							<span id="UsPrice"></span>
 						</td>
 					</tr>
 					<tr>
 						<td><input type="checkbox"/>全选</td>
-						<td><a href="#">删除所选</a></td>
+						<td><a href="#" id="delete">删除所选</a></td>
 						<td><a href="#">放入收藏夹</a></td>
 						<td>
-							共计<span>1</span>件商品，合计金额
-							<span>￥1599.00</span>
+							共计<span id="sumNum"></span>件商品，合计金额
+							<span id="zongjiage"></span>
 						</td>						
 					</tr>
 				</tbody>
 			</table>
 			<div id="settlement">
 				<div>去结算</div>
-				<div><a href="Activities.html">继续购物</a></div>
+				<div><a href="list.html">继续购物</a></div>
 				
 			</div>
 		</div>
@@ -425,5 +425,7 @@
 	</div>
 </body>
 </html>
-<script type="text/javascript" src="../js/shoppingCar.js"></script>
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/cookieTools.js" ></script>
+<script type="text/javascript" src="../js/shoppingCar.js"></script>
+

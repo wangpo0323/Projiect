@@ -261,7 +261,7 @@
 		<div id="content">
 			<table width="1200" cellspacing="0" cellpadding="0" class="border" id="onsale">
 				<tbody>
-					<tr>
+					<tr id="tr">
 						<td></td>
 						<td>商品图片</td>
 						<td>商品名称</td>
@@ -270,34 +270,18 @@
 						<td>优惠</td>
 						<td></td>
 					</tr>
-					<!--商品信息显示行---->
-					<tr>
-						<td><input type="checkbox" id="xuanze" /></td>
-						<td><img src=" " id="img" style="width:65px;height:65px;margin:0 auto;"/></td>
-						<td>
-							<span><a href="#" id="shuoming"> </a></span><br/>
-							<span>尺寸:24*13.5*5cm;</span>
-						</td>
-						<td id="price"></td>
-						<td class="jiusan">
-							<span class="jian" id="btn1">-</span>
-							<input type="text" value=" 1" id="num"/>
-							<span class="jia" id="btn2">+</span>
-						</td>
-						<td>￥0.00</td>
-						<td>
-							<span id="sumPrice"></span><br/>
-							<span id="UsPrice"></span>
-						</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"/>全选</td>
+					
+					<tr id="quanuxan">
+						<td><input type="checkbox" id="quanxuan"/>全选</td>
 						<td><a href="#" id="delete">删除所选</a></td>
 						<td><a href="#">放入收藏夹</a></td>
 						<td>
 							共计<span id="sumNum"></span>件商品，合计金额
 							<span id="zongjiage"></span>
-						</td>						
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 				</tbody>
 			</table>
@@ -428,4 +412,4 @@
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="../js/cookieTools.js" ></script>
 <script type="text/javascript" src="../js/shoppingCar.js"></script>
-
+<script type="text/javascript" src="../js/checkbox1703.js" ></script>

@@ -23,24 +23,7 @@ var genghuan=document.getElementsByClassName("genghuan")[0];
 	genghuan.onclick=function(){
 		changeyzm()
 	}
-/*function addLoadEvent(func){
-    var oldonload=window.onload;
-    if(typeof window.onload!="function"){
-        window.onload=func;
-    }else{
-        window.onload=function(){
-            oldonload();
-            func();
-        }
-    }
-};*/
-//addLoadEvent(changeyzm);
-changeyzm();
-//给刷新按钮绑定事件
-$("input2").onclick=function(){
-	$("input2").reset;
-}
-//提交按钮绑定事件
+
 
 
 

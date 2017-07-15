@@ -87,7 +87,7 @@ $(function(){
 							async:true,
 							data:{'vipName':vipName,'goodsId':goodsId},
 							success:function(data){
-								alert('删除成功')
+								location.reload()
 						}
 					});
 					}
@@ -135,9 +135,47 @@ $(function(){
 					}
 				});
 			})
-			
-				
-				
+			//剪数量
+			$('#content').on('click','#num1',function(){
+					//拿到3个值(动态获取)
+					var goodsCount=$(this).parent().find('#num2').val();
+					var goodsType1=$(this).parent().parent().find('#goodstype').html().split("￥")[1];
+					var goodsId=$(this).parent().parent().attr("ord");
+					//计算每个商品的总价格
+					var sumPrice=goodsType1*goodsCount;
+					var UssumPrice=parseInt(sumPrice/7);
+					//找到当前目标的插入
+					$(this).parent().parent().find("#sumPrice").html("￥"+sumPrice);
+					$(this).parent().parent().find("#usPrice").html("$"+UssumPrice);
+				$.ajax({
+					type:"get",
+					url:"../php/updateGoodsCount.php",
+					data:{'vipName':vipName,'goodsId':goodsId,'goodsCount':goodsCount},
+					async:true,
+					success:function(data){		
+						//在此请求服务器拿到obj
+						$.ajax({
+							type:"get",
+							url:"../php/getShoppingCart.php",
+							data:{'vipName':vipName},
+							async:true,
+							success:function(data){
+								let obj=eval(data);
+								let newArray=[],newArray1=[];
+								for(var i in obj){
+									newArray.push(obj[i].goodsCount);
+									newArray1.push(obj[i].goodsCount*obj[i].goodsType)
+								}
+								//将改变后的数量插入页面 
+								var jianshu1=eval(newArray.join('+'));
+								var zongjiage=eval(newArray1.join('+'));
+								$('#sumNum').html(jianshu1);
+								$('#zongjiage').html('￥'+zongjiage);
+							}
+						});
+					}
+				});
+			})
 		}
 	})
 })

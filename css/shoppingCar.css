@@ -123,22 +123,30 @@
 #content table tr:last-child td{
 	border-bottom: none;
 }
+
+
+
+
+
+
+
+
 #num{
 	width:59px;
 	heigth:19px;
 	border:1px solid #ccc;
 }
 
-
-
-
-
-
-
 #content table tr:last-child a{
 	color:#000;
 	font-weight: bold;
 }
+
+
+
+
+
+
 #settlement{
 	width:1200px;
 	height:30px;

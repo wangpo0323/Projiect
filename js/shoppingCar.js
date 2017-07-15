@@ -15,12 +15,25 @@ $(function(){
 		async:true,
 		success:function(data){
 			let obj=eval(data);
+			let arr=[],array=[];
 			//将返回的内容解析，将内容插入页面
 			for(let i in obj){
 				//创建 表格
-			let str="<tr id='trs' ord='"+obj[i].goodsId+"'><td><input type='checkbox'/></td><td><img style='width:65px;height:65px' src='"+obj[i].goodsImg+"'</td><td>"+obj[i].goodsDesc+"</td><td>￥"+obj[i].goodsType+"</td><td><input id='num1' style='width:10px;height:21px' type='button' value='-'/><input id='num2' style= 'width:59px;height:19px;border:1px solid #ccc;text-align:center' type='text' value=\""+obj[i].goodsCount+"\"/><input id='num3' style='width:10px;height:21px' type='button' value='+'/></td><td>￥0.00</td><td><span>￥"+obj[i].goodsCount*obj[i].goodsType+"</span><br/><span>$"+parseInt(obj[i].goodsCount*obj[i].goodsType/7)+"</span></td></tr>"				
+			let str="<tr id='trs' ord='"+obj[i].goodsId+"'><td><input class='count' type='checkbox'/></td><td><img style='width:65px;height:65px' src='"+obj[i].goodsImg+"'</td><td>"+obj[i].goodsDesc+"</td><td class='goodsTypeM' id='goodstype'>￥"+obj[i].goodsType+"</td><td><input id='num1' style='width:10px;height:21px' type='button' value='-'/><input id='num2' style= 'width:59px;height:19px;border:1px solid #ccc;text-align:center' type='text' value=\""+obj[i].goodsCount+"\"/><input id='num3' style='width:10px;height:21px' type='button' value='+'/></td><td>￥0.00</td><td><span id='sumPrice'>￥"+obj[i].goodsCount*obj[i].goodsType+"</span><br/><span id='usPrice'>$"+parseInt(obj[i].goodsCount*obj[i].goodsType/7)+"</span></td></tr>"				
 				$("#quanuxan").before(str);
+				arr.push(obj[i].goodsCount);
+				array.push(obj[i].goodsCount*obj[i].goodsType)
 			}
+			//将arr的求和出插入到页面(件数)
+			var jianshu=eval(arr.join('+'))
+			$('#sumNum').html(jianshu);
+			//求所有商品的总jiage 
+			var sumMoney=eval(array.join('+'))
+			if(!sumMoney){
+				sumMoney=0;
+			}else{
+				$('#zongjiage').html('￥'+sumMoney);
+			}			
 			//减号按钮事件
 			let jians=$("#onsale #num1")
 			for(let i=0;i<jians.length;i++){
@@ -49,7 +62,7 @@ $(function(){
 				})(i)
 			}
 			/*
-			 * 全选单选
+			 	全选单选
 			 */
 			$("#quanxuan").click(function(){
 				$("#onsale :checkbox").check(this.checked);
@@ -60,74 +73,75 @@ $(function(){
 			if(!b){
 				alert("请选择删除的商品")
 			}else{
-				let tbs=document.getElementById("onsale");				
-				for(var i=0;i<tbs.length;i++){
-					var goodsId=tbs[i].getAttribute("ord");
-					console.log(goodsId)					
-				}
-				
-				$.ajax({
-					type:"get",
-					url:"../php/deleteGoods.php",
-					async:true,
-					data:{'vipName':vipName,'goodsId':goodsId},
-					success:function(data){
-						$(this).prev().remove()
-						location.reload();
+				//1.3个复选框
+				//2.用循环判断  attr checked;
+				//3.通过父元素
+				let count=$(".count");
+				for(var i=0;i<count.length;i++){
+					if(count.eq(i).attr("checked")=="checked"){
+						let goodsId=count.eq(i).parent().parent().attr("ord");
+						count.eq(i).parent().parent().remove()
+						$.ajax({
+							type:"get",
+							url:"../php/deleteGoods.php",
+							async:true,
+							data:{'vipName':vipName,'goodsId':goodsId},
+							success:function(data){
+								alert('删除成功')
 						}
 					});
-				}
+					}
+				}				
+			}
 			})
-			//修改购物车数量
+			//修改购物车数量（增加）
+				$('#content').on('click','#num3',function(){
+					//拿到3个值(动态获取)
+					var goodsCount=$(this).parent().find('#num2').val();
+					var goodsType1=$(this).parent().parent().find('#goodstype').html().split("￥")[1];
+					var goodsId=$(this).parent().parent().attr("ord");
+					//计算每个商品的总价格
+					var sumPrice=goodsType1*goodsCount;
+					var UssumPrice=parseInt(sumPrice/7);
+					//找到当前目标的插入
+					$(this).parent().parent().find("#sumPrice").html("￥"+sumPrice);
+					$(this).parent().parent().find("#usPrice").html("$"+UssumPrice);
+				$.ajax({
+					type:"get",
+					url:"../php/updateGoodsCount.php",
+					data:{'vipName':vipName,'goodsId':goodsId,'goodsCount':goodsCount},
+					async:true,
+					success:function(data){		
+						//在此请求服务器拿到obj
+						$.ajax({
+							type:"get",
+							url:"../php/getShoppingCart.php",
+							data:{'vipName':vipName},
+							async:true,
+							success:function(data){
+								let obj=eval(data);
+								let newArray=[],newArray1=[];
+								for(var i in obj){
+									newArray.push(obj[i].goodsCount);
+									newArray1.push(obj[i].goodsCount*obj[i].goodsType)
+								}
+								//将改变后的数量插入页面 
+								var jianshu1=eval(newArray.join('+'));
+								var zongjiage=eval(newArray1.join('+'));
+								$('#sumNum').html(jianshu1);
+								$('#zongjiage').html('￥'+zongjiage);
+							}
+						});
+					}
+				});
+			})
 			
+				
+				
 		}
-	});	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	})
 })
 
-
-
-
-
-
-
-
-
-
-
-//修改购物车的数量
-//	$(function(){
-//		$($("#num").val()).bind('input',function(){
-//			alert(1)
-//			$.ajax({
-//				type:"get",
-//				url:"../php/updateGoodsCount.php",
-//				async:true,
-//				data:{"vipName":vipName,"goodsId":goodsId,"goodsCount":goodsNum},
-//				success:function(data){
-//					
-//				}
-//			});			
-//		})
-//			
-//			
-//		
-//	})
 		
 
 
